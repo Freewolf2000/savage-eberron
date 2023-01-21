@@ -2,7 +2,7 @@
    "title": "Savage Eberron Rules",
    "description": "Ruleset for Savage Eberron rules. This includes content from SWADE, from the Fantasy Companion, from Savage Pathfinder, and homebrew content.",
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
-   "protected": true,
+   "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
    "version": "0.0.3",
    "packs": [
