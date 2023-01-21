@@ -1,0 +1,99 @@
+{
+   "name": "savage-eberron",
+   "title": "Savage Eberron",
+   "description": "This is the additional ruleset for the Eberron Campaign Setting converted to Savage Worlds Adventure Edition. All needed additional Edges, Powers, Hindrances, Ancestries, Equipment and Magical Items for the Eberron Campaign Setting have been added.",
+   "author": "Freewolf2000",
+   "version": "0.0.1",
+   "url": "https://github.com/Freewolf2000/savage-eberron",
+   "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
+   "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip",
+   "esmodules": [
+       "./scripts/sweb-rules.js",
+       "./scripts/tinyMCE-editor.js"
+   ],
+   "styles": [
+       "./styles/sweb-core-fonts.css",
+       "./styles/sweb-core.css",
+       "./styles/sweb-trade-dress.css",
+       "./styles/sweb-additions.css",
+       "./styles/sweb-periodicals.css"
+   ],
+   "packs": [
+   {
+     {
+       "name": "savage-eberron-edges",
+       "label": "Savage Eberron Edges",
+       "path": "packs/savage-eberron-edges.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-hindrances",
+       "label": "Savage Eberron Hindrances",
+       "path": "packs/savage-eberron-hindrances.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-gear",
+       "label": "Savage Eberron Gear",
+       "path": "packs/savage-eberron-equipment.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-powers",
+       "label": "Savage Eberron Powers",
+       "path": "packs/savage-eberron-powers.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-skills",
+       "label": "Savage Eberron Skills",
+       "path": "packs/savage-eberron-skills.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-special-abilities",
+       "label": "Savage Eberron Special Abilities",
+       "path": "packs/savage-eberron-abilities.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     }
+   ],
+   "id": "sweb-core-rules",
+   "relationships": {
+     "systems": [
+       {
+         "id": "swade",
+         "type": "system",
+         "manifest": "https://gitlab.com/api/v4/projects/16269883/packages/generic/swade/latest/system.json",
+         "compatibility": {
+           "minimum": "2.0.5",
+           "verified": "2.0.5"
+         }
+       }
+     ]
+   },
+   "compatibility": {
+     "minimum": "10.285",
+     "verified": "10.287"
+   },
+   "flags": {
+     "sigil": {}
+   }
+}
