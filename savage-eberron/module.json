@@ -1,10 +1,10 @@
 {
-   "title": "Savage Eberron Rules",
+   "title": "Savage Eberron",
    "description": "Ruleset for Savage Eberron rules. This includes content from SWADE, from the Fantasy Companion, from Savage Pathfinder, and homebrew content.",
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.3",
+   "version": "0.0.4",
    "packs": [
      {
        "name": "savage-eberron-edges",
@@ -65,12 +65,15 @@
    ],
    "styles": [
    ],
-   "id": "sweb-core-rules",
+   "id": "savage-eberron-rules",
    "authors": [
      {
        "name": "Freewolf2000",
-       "url": "https://savagetalesofeberron.podbean.com/",
-       "flags": {}
+       "url": "https://www.savagetalesofeberron.com/",
+       "podcast": "https://savagetalesofeberron.podbean.com/",
+       "discord": "Freewolf#7951",
+       "twitter": "@SavageEberron",
+       "reddit": "u/Freewolf"
      }
    ],
    "relationships": {
@@ -87,8 +90,8 @@
      ]
    },
    "compatibility": {
-     "minimum": "10.285",
-     "verified": "10.287"
+     "minimum": "10",
+     "verified": "10"
    },
    "flags": {
      "sigil": {}
