@@ -1,0 +1,306 @@
+&.swade-official.actor {
+	--content-background-image: none;
+	--section-header-color: var(--heading-color-light);
+	--section-header-size: 1.5em;
+	--section-header-font: #{$corners};
+	--default-font: #{$romic};
+	--default-font-size: 1.03em;
+	--input-box-shadow: 0 0 5px var(--heading-color-light);
+	--input-text-shadow: 0 0 10px var(--heading-color-light);
+	--header-text-shadow: 0 0 0.2em #ffde9ac4;
+
+	border-image-source: url(../assets/layout/sheet-border.webp);
+
+	border-image-slice: 44;
+	border-image-width: 14px;
+	border-image-outset: 7px;
+	border-image-repeat: repeat;
+	border-style: solid;
+}
+
+.window-header {
+	flex: 0 0 30px;
+	background: none;
+	text-shadow: 0 0 0.5em #000000, 0 0 0.5em #000000;
+}
+
+.window-content {
+	form.main-grid {
+		grid-template-rows: 3em 2em 2em max-content minmax(0, 1fr);
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+
+		.char-img-container {
+			grid-row: 1/4;
+			grid-column: 1/3;
+			padding-left: .5em;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+				border: 0;
+				filter: drop-shadow(0.2em 0.4em 0.3em rgba(0, 0, 0, 0.5));
+			}
+		}
+
+		.tabs {
+			grid-row: 4;
+		}
+		.sheet-body {
+			grid-row: 5 / -1;
+		}
+	}
+}
+
+.sheet-body {
+	padding: 1em 0 .5em 0;
+	font-family: $romic;
+}
+
+.charname-container,
+.conviction-enabled .charname-container {
+	grid-column: 3 / 9;
+}
+
+.charname-container {
+	//background-image: url("../assets/layout/class-header-background.webp");
+	//background-size: 100% 100%;
+	//margin: 0 5em;
+}
+
+.gu-1 {
+	position: absolute;
+	width: calc(100% - 6px);
+	height: 13em;
+	top: 3px;
+	left: 3px;
+	display: block;
+	background-image: url("../assets/layout/banner-background.webp");
+	background-size: 100% 100%;
+	z-index: -1;
+}
+
+.conviction-enabled {
+	.sheet-body {
+		padding: 1.5em 0 .5em 0;
+	}
+	.gu-1 {
+		height: 15em;
+	}
+}
+
+.gu-3 {
+	display: block;
+	background-image: url("../assets/layout/long-wood-bar.webp");
+	grid-row: 1 / 3;
+	grid-column: 3 / 9;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center
+}
+
+.race {
+	grid-row: 3;
+	grid-column: 3 / 6;
+}
+.archetype {
+	grid-column: 3 / 6;
+}
+.rank {
+	grid-column: 6 / 9;
+}
+.advances {
+	grid-row: 3;
+	grid-column: 6 / 9;
+
+	* {
+		flex: 50%;
+	}
+}
+
+.tab {
+	padding: 1em 1em 0em 1em;
+}
+
+.window-content {
+	padding: 8px;
+}
+
+.advances input[type=number] {
+	color: var(--heading-color-cream);
+}
+
+.character-detail,
+.character-detail input[type=text],
+.character-detail input[type=number],
+.character-detail label {
+	font-family: var(--section-header-font);
+	color: var(--heading-color-dark);
+	font-size: 1.1em;
+	border: none;
+	text-align: center;
+}
+
+input.charname,
+.character-detail input,
+.character-detail label {
+	text-shadow: var(--header-text-shadow);
+}
+input.charname {
+	position: relative;
+	left: -8px;
+	font-family: $corners;
+	color: var(--heading-color-dark);
+	padding-left: 1ch;
+	padding-bottom: .3em;
+	text-align: center;
+}
+
+.sheet-header-official div:first-child label {
+	display: flex;
+}
+
+input[type].conviction-counter:active,
+input[type].conviction-counter:hover,
+input[type].conviction-counter:focus,
+.character-detail input:active,
+.character-detail input:hover,
+.character-detail input:focus,
+input.charname:active,
+input.charname:hover,
+input.charname:focus {
+	box-shadow: none;
+	border-bottom: dashed 1px var(--heading-color-dark);
+}
+
+#peg-logo, #swade-logo {
+	display: none;
+}
+
+.branding {
+	grid-row: 1 / 4;
+	grid-column: 10 / 13;
+	flex-direction: column;
+	margin: .5em 0em;
+	align-items: center;
+	filter: drop-shadow(.1em .1em .2em black);
+
+	&::before {
+		content: " ";
+		background-image: url("../assets/icons/sweb-logo-square-small.webp");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		height: 100%;
+		width: 100%;
+	}
+}
+.conviction-enabled .branding {
+	grid-row: 1;
+	grid-column: 9 / 13;
+	flex-direction: row;
+	margin: -1em 0 0 0;
+
+	&::before {
+		background-image: url("../assets/icons/sweb-logo-wide-small.webp");
+	}
+}
+
+#conviction {
+	--color-initial: rgba(50, 13, 0, 1);
+    --color-high: rgba(142, 45, 41, 0.7);
+    --color-low: rgba(50, 13, 0, 0);
+}
+
+input[type].conviction-counter {
+	background: none;
+	font-size: 1.5em;
+}
+.conviction-toggle {
+	font-family: var(--section-header-font);
+}
+
+.conviction-enabled #conviction,
+.conviction-enabled .gu-2 {
+	grid-row: 2 / 4;
+	grid-column: 9 / 13;
+	font-family: var(--section-header-font);
+	color: var(--heading-color-dark);
+}
+.conviction-enabled .gu-2 {
+	display: block;
+	background-image:  url("../assets/layout/ripped_paper.webp");
+	background-size: 100% 80%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -1.2em 1.5em;
+	transform: rotate(3deg);
+	z-index: -1;
+}
+
+.tabs .item {
+	font-family: $corners;
+	color: var(--table-color-c);
+	background-image:  url("../assets/layout/h1-background.webp");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: .3em 1ch 0.2em 1ch;
+	box-shadow: none;
+	filter: drop-shadow(0 0 .1em black);
+	border-radius: 5px;
+	font-size: 1.4em;
+	transition: transform 1s, filter .5s;
+	//text-shadow: 0 0 .1em var(--table-color-c);
+}
+.tabs .item.active {
+	filter: drop-shadow(0 0 .3em black);
+	color: var(--heading-color-cream);
+	text-shadow: 0 0 .5em var(--heading-color-dark), 0 0 1em var(--heading-color-dark);
+}
+
+.note-box {
+	grid-template-rows: 1em 1fr 1em;
+	filter: drop-shadow(0.1em 0.1em .3em #00000066);
+	margin-bottom: .3em;
+}
+
+.note-box::before {
+	content: " ";
+	grid-column: 1;
+	grid-row: 1 / -1;
+	background-image: url("../assets/layout/Vertical-2.webp");
+	background-color: #ffffff5e;
+	background-blend-mode: luminosity;
+	background-size: 100% auto;
+	background-position: top;
+	background-repeat: repeat-y;
+	clip-path: url(#sweb-sidebar-clip);
+	z-index: -1;
+}
+
+.note-box .note-header,
+.note-box .note-footer {
+	background-image: none;
+	aspect-ratio: initial;
+}
+.note-box .note-main {
+	background-image: none;
+}
+
+.skills {
+	margin-right: .25em;
+}
+.quickaccess {
+	margin-left: .25em;
+}
+
+.description .char-img-container {
+	background-image: url("../assets/layout/paper-grunge.webp");
+	transform: rotate(-1deg);
+}
+
+.description .advances .editor,
+.description .biography .editor {
+	border: 1px dashed var(--heading-color-dark);
+}

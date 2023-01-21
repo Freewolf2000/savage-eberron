@@ -1,0 +1,23 @@
+/**
+ * Gulp will automatically prepend the variable $name
+ * to the start of this file with the file name.
+ */
+
+@import "fonts";
+@import "color";
+
+@import "trade-dress";
+@import "core";
+
+.swpf-sheet {
+	@import "character-sheet";
+}
+
+.swpf-compendium {
+	
+    background-image: url(../assets/layout/sp-no-top-background.webp);
+    background-size: 200% 100%;
+	
+	@import "compendium";
+}
+

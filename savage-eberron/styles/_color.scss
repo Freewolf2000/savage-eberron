@@ -1,0 +1,51 @@
+.sweb-wrapper, .sweb-core, .sweb-sheet, .sweb-compendium {
+	--red: #940609;
+	--tan: #ece5b2;
+
+	--table-color-a: #e1d9be;
+	--table-color-b: #f4f1e7;
+	--table-color-c: #e7b675;
+
+	--table-heading-color: #941a1c;
+	--table-subheading-color: black;
+
+	--heading-color-dark: var(--red);
+	--heading-color-light: #8e2d29;
+	--heading-color-cream: #e1d9bf;
+
+	--text-color-white: white;
+
+	--color-size-tiny: #e7c3b3;
+	--color-size-v-small: #d69c87;
+	--color-size-small: #c67b63;
+	--color-size-normal: #b65b44;
+	--color-size-large: #ad4731;
+	--color-size-huge: #a2311f;
+	--color-size-gargantuan: #940709;
+}
+
+$red: var(--red);
+$tan: var(--tan);
+
+$table-color-a: var(--table-color-a);
+$table-color-b: var(--table-color-b);
+$table-color-c: var(--table-color-c);
+
+$table-heading-color: var(--table-heading-color);
+$table-subheading-color: var(--table-subheading-color);
+
+$heading-color-dark: var(--heading-color-dark);
+$heading-color-light: var(--heading-color-light);
+$heading-color-cream: var(--heading-color-cream);
+
+$text-color-white: var(--text-color-white);
+
+$color-size: (
+	tiny: var(--color-size-tiny),
+	v-small: var(--color-size-v-small),
+	small: var(--color-size-small),
+	normal: var(--color-size-normal),
+	large: var(--color-size-large),
+	huge: var(--color-size-huge),
+	gargantuan: var(--color-size-gargantuan)
+);

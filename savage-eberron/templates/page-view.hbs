@@ -1,0 +1,13 @@
+{{#if data.title.show}}
+<header class="journal-page-header">
+    <h{{data.title.level}}{{#if data.subtitle}} class="split"{{/if}}>
+        <span>{{data.name}}</span>
+    {{#if data.subtitle}}
+        <span class="subtitle">{{data.subtitle}}</span>
+    {{/if}}
+    </h{{data.title.level}}>
+</header>
+{{/if}}
+<section class="journal-page-content">
+    {{{editor.content}}}
+</section>
