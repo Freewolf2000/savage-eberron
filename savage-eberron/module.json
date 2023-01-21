@@ -1,23 +1,12 @@
 {
    "name": "savage-eberron",
-   "title": "Savage Eberron",
-   "description": "This is the additional ruleset for the Eberron Campaign Setting converted to Savage Worlds Adventure Edition. All needed additional Edges, Powers, Hindrances, Ancestries, Equipment and Magical Items for the Eberron Campaign Setting have been added.",
+   "title": "Savage Eberron Rules",
+   "description": "Ruleset for Savage Eberron rules. This includes content from SWADE, from the Fantasy Companion, from Savage Pathfinder, and homebrew content.",
    "author": "Freewolf2000",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "url": "https://github.com/Freewolf2000/savage-eberron",
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip",
-   "esmodules": [
-       "./scripts/sweb-rules.js",
-       "./scripts/tinyMCE-editor.js"
-   ],
-   "styles": [
-       "./styles/sweb-core-fonts.css",
-       "./styles/sweb-core.css",
-       "./styles/sweb-trade-dress.css",
-       "./styles/sweb-additions.css",
-       "./styles/sweb-periodicals.css"
-   ],
    "packs": [
    {
      {
@@ -74,6 +63,17 @@
        "system": "swade",
        "flags": {}
      }
+   ],
+   "esmodules": [
+       "./scripts/sweb-rules.js",
+       "./scripts/tinyMCE-editor.js"
+   ],
+   "styles": [
+       "./styles/sweb-core-fonts.css",
+       "./styles/sweb-core.css",
+       "./styles/sweb-trade-dress.css",
+       "./styles/sweb-additions.css",
+       "./styles/sweb-periodicals.css"
    ],
    "id": "sweb-core-rules",
    "relationships": {
