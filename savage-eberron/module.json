@@ -62,15 +62,8 @@
      }
    ],
    "esmodules": [
-       "./scripts/sweb-rules.js",
-       "./scripts/tinyMCE-editor.js"
    ],
    "styles": [
-       "./styles/sweb-core-fonts.css",
-       "./styles/sweb-core.css",
-       "./styles/sweb-trade-dress.css",
-       "./styles/sweb-additions.css",
-       "./styles/sweb-periodicals.css"
    ],
    "id": "sweb-core-rules",
    "authors": [
