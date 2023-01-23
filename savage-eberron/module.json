@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.7",
+   "version": "0.0.8",
    "packs": [
      {
        "name": "savage-eberron-edges",
@@ -62,12 +62,12 @@
      }
    ],
    "esmodules": [
-     "scripts/swEB-core-rules.js"
+     "scripts/sweb-core-rules.js"
    ],
    "styles": [
      "styles/sweb-core.css"
    ],
-   "id": "savage-eberron-rules",
+   "id": "sweb-core-rules",
    "authors": [
      {
        "name": "Freewolf2000",
