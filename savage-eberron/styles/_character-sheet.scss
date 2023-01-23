@@ -173,7 +173,9 @@ input.charname:focus {
 	border-bottom: dashed 1px var(--heading-color-dark);
 }
 
-#peg-logo, #swade-logo {
+#peg-logo, #swade-logo,
+// This part is added to hide the Pinnacle logo
+.swade-official .branding {
 	display: none;
 }
 
@@ -187,7 +189,8 @@ input.charname:focus {
 
 	&::before {
 		content: " ";
-		background-image: url("../assets/icons/sweb-logo-square-small.webp");
+//		PLACE FOR A SAVAGE EBERRON LOGO
+		background-image: url("https://assets.forge-vtt.com/5f43f8ea1a91d63438d13159/artwork/logos/eberron-logo-original.webp");
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -202,7 +205,8 @@ input.charname:focus {
 	margin: -1em 0 0 0;
 
 	&::before {
-		background-image: url("../assets/icons/sweb-logo-wide-small.webp");
+//		PLACE FOR A SAVAGE EBERRON LOGO
+		background-image: url("https://assets.forge-vtt.com/5f43f8ea1a91d63438d13159/artwork/logos/eberron-logo-original.webp");
 	}
 }
 

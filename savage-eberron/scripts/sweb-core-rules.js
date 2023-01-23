@@ -1,4 +1,4 @@
-const ID = "sweb-core-rules";
+const ID = "savage-eberron-rules";
 const SHEET_NAME = 'Savage Eberron Sheet';
 
 Hooks.on("init", () => {
@@ -14,7 +14,7 @@ class SWEBSheet extends game.swade.sheets.CharacterSheet {
   }
 }
 
-Actors.registerSheet("sweb-core-rules", SWEBSheet, {
+Actors.registerSheet("savage-eberron-rules", SWEBSheet, {
   types: ["character"],
   makeDefault: false,
   label: SHEET_NAME
