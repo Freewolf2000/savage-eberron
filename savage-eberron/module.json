@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.9",
+   "version": "0.0.10",
    "packs": [
      {
        "name": "savage-eberron-edges",
@@ -43,6 +43,15 @@
        "flags": {}
      },
      {
+       "name": "savage-eberron-rules",
+       "label": "Savage Eberron Rules",
+       "path": "packs/savage-eberron-rules.db",
+       "private": false,
+       "type": "JournalEntry",
+       "system": "swade",
+       "flags": {}
+     },
+     {
        "name": "savage-eberron-skills",
        "label": "Savage Eberron Skills",
        "path": "packs/savage-eberron-skills.db",
@@ -55,6 +64,15 @@
        "name": "savage-eberron-special-abilities",
        "label": "Savage Eberron Special Abilities",
        "path": "packs/savage-eberron-abilities.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-treasure",
+       "label": "Savage Eberron Treasure",
+       "path": "packs/savage-eberron-treasure.db",
        "private": false,
        "type": "Item",
        "system": "swade",
