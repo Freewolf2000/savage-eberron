@@ -4,8 +4,17 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.10",
+   "version": "0.0.11",
    "packs": [
+     {
+       "name": "savage-eberron-bestiary-abilities",
+       "label": "Savage Eberron Bestiary Abilities",
+       "path": "packs/savage-eberron-bestiary-abilities.db",
+       "private": false,
+       "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
      {
        "name": "savage-eberron-edges",
        "label": "Savage Eberron Edges",

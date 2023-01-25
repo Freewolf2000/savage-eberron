@@ -51,7 +51,7 @@ Hooks.on("ready", async () => {
 
 Hooks.once("ready", onReady);
 function onReady() {
-	class SWEBJournalSheet extends JournalSheet {
+	class SWPFJournalSheet extends JournalSheet {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
 				classes: ["sheet", "journal-sheet", "journal-entry", "sweb-wrapper"]
@@ -95,10 +95,10 @@ function onReady() {
 		}
 	}
 
-	class SWEBJournalSheetPage extends JournalTextPageSheet {
+	class SWPFJournalSheetPage extends JournalTextPageSheet {
 		// static get defaultOptions() {
 		// 	return foundry.utils.mergeObject(super.defaultOptions, {
-		// 		classes: ["sheet", "journal-sheet", "journal-entry-page", "text", "sweb-journal-page", "sweb", "sweb-dialog"]
+		// 		classes: ["sheet", "journal-sheet", "journal-entry-page", "text", "swpf-journal-page", "swpf", "swpf-dialog"]
 		// 	});
 		// }
 
@@ -119,7 +119,7 @@ function onReady() {
 		}
 	}
 
-	class SWEBCompendiumTOC extends game.swade.apps.CompendiumTOC {
+	class SWPFCompendiumTOC extends game.swade.apps.CompendiumTOC {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
 				classes: ['swade-app', 'compendium-toc', 'sweb-compendium'],
@@ -128,21 +128,21 @@ function onReady() {
 		}
 	}
 
-	class SWEBJournalSheetImagePage extends JournalImagePageSheet {}
+	class SWPFJournalSheetImagePage extends JournalImagePageSheet {}
 
-	Journal.registerSheet(ID, SWEBJournalSheet, {
+	Journal.registerSheet(ID, SWPFJournalSheet, {
 		type: "base",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
 	});
 
-	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWEBJournalSheetPage, {
+	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWPFJournalSheetPage, {
 		type: "text",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
 	});
 
-	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWEBJournalSheetImagePage, {
+	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWPFJournalSheetImagePage, {
 		type: "image",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
@@ -155,7 +155,7 @@ function onReady() {
 		const isBlocked = game.settings.get('swade', 'tocBlockList')[
 			pack.collection
 		];
-		const isSavageEberron = [
+		const isPathfinder = [
 			"sweb-core-rules",
 			"sweb-rotrl1",
 			"sweb-rotrl2",
@@ -165,8 +165,8 @@ function onReady() {
 			"sweb-rotrl6",
 		].includes(pack.metadata.packageName);
 
-		if (isRightType && !isBlocked && isSavageEberron) {
-			pack.apps = [new SWEBCompendiumTOC(pack)];
+		if (isRightType && !isBlocked && isPathfinder) {
+			pack.apps = [new SWPFCompendiumTOC(pack)];
 		}
 	}
 }
