@@ -1,5 +1,5 @@
-const ID = "swpf-core-rules";
-const SHEET_NAME = 'Savage Pathfinder Official Sheet by Pinnacle';
+const ID = "sweb-core-rules";
+const SHEET_NAME = 'Savage Eberron Sheet';
 
 Hooks.on("init", () => {
 
@@ -28,11 +28,11 @@ Hooks.on("ready", async () => {
 	for (let pack of game.packs.contents) {
 		if (pack.collection.includes(ID)) pack.getIndex();
 	}
-	
+
 	//Add sidebar clipping mask to page
 	$(document.body).append(await renderTemplate(`modules/${ID}/assets/layout/sidebar-mask.html`));
 
-  console.debug("SWPF Core | Initalizing....")
+  console.debug("SWEB Core | Initalizing....")
 
   CONFIG.SWADE.measuredTemplatePresets.push({
       data: { t: CONST.MEASURED_TEMPLATE_TYPES.RAY, distance: 12, width: 1 },
@@ -110,7 +110,7 @@ function onReady() {
 			const data = await super.getData(...args);
 
 			const flags = this.object.flags[ID];
-			
+
 			if (flags.pageNumber) data.data.number = flags.pageNumber;
 			if (flags.subtitle) data.data.subtitle = flags.subtitle;
 
@@ -156,7 +156,7 @@ function onReady() {
 			pack.collection
 		];
 		const isPathfinder = [
-			"swpf-core-rules",
+			"sweb-core-rules",
 			"swpf-rotrl1",
 			"swpf-rotrl2",
 			"swpf-rotrl3",
@@ -170,4 +170,3 @@ function onReady() {
 		}
 	}
 }
-
