@@ -1,12 +1,12 @@
-const ID = "sweb-core-rules";
-const SHEET_NAME = 'Savage Eberron Sheet';
+const ID = "swpf-core-rules";
+const SHEET_NAME = 'Savage Pathfinder Official Sheet by Pinnacle';
 
 Hooks.on("init", () => {
 
-class SWEBSheet extends game.swade.sheets.CharacterSheet {
+class SWPFSheet extends game.swade.sheets.CharacterSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ['sweb-sheet', 'swade-official', 'sheet', 'actor'],
+      classes: ['swpf-sheet', 'swade-official', 'sheet', 'actor'],
       width: 705,
       height: 800,
       resizable: true,
@@ -14,7 +14,7 @@ class SWEBSheet extends game.swade.sheets.CharacterSheet {
   }
 }
 
-Actors.registerSheet("sweb-core-rules", SWEBSheet, {
+Actors.registerSheet("swpf-core-rules", SWPFSheet, {
   types: ["character"],
   makeDefault: false,
   label: SHEET_NAME
@@ -28,11 +28,11 @@ Hooks.on("ready", async () => {
 	for (let pack of game.packs.contents) {
 		if (pack.collection.includes(ID)) pack.getIndex();
 	}
-
+	
 	//Add sidebar clipping mask to page
 	$(document.body).append(await renderTemplate(`modules/${ID}/assets/layout/sidebar-mask.html`));
 
-  console.debug("SWEB Core | Initalizing....")
+  console.debug("SWPF Core | Initalizing....")
 
   CONFIG.SWADE.measuredTemplatePresets.push({
       data: { t: CONST.MEASURED_TEMPLATE_TYPES.RAY, distance: 12, width: 1 },
@@ -54,7 +54,7 @@ function onReady() {
 	class SWPFJournalSheet extends JournalSheet {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
-				classes: ["sheet", "journal-sheet", "journal-entry", "sweb-wrapper"]
+				classes: ["sheet", "journal-sheet", "journal-entry", "swpf-wrapper"]
 			});
 		}
 
@@ -110,7 +110,7 @@ function onReady() {
 			const data = await super.getData(...args);
 
 			const flags = this.object.flags[ID];
-
+			
 			if (flags.pageNumber) data.data.number = flags.pageNumber;
 			if (flags.subtitle) data.data.subtitle = flags.subtitle;
 
@@ -122,7 +122,7 @@ function onReady() {
 	class SWPFCompendiumTOC extends game.swade.apps.CompendiumTOC {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
-				classes: ['swade-app', 'compendium-toc', 'sweb-compendium'],
+				classes: ['swade-app', 'compendium-toc', 'swpf-compendium'],
 				width: 850,
 			});
 		}
@@ -156,13 +156,13 @@ function onReady() {
 			pack.collection
 		];
 		const isPathfinder = [
-			"sweb-core-rules",
-			"sweb-rotrl1",
-			"sweb-rotrl2",
-			"sweb-rotrl3",
-			"sweb-rotrl4",
-			"sweb-rotrl5",
-			"sweb-rotrl6",
+			"swpf-core-rules",
+			"swpf-rotrl1",
+			"swpf-rotrl2",
+			"swpf-rotrl3",
+			"swpf-rotrl4",
+			"swpf-rotrl5",
+			"swpf-rotrl6",
 		].includes(pack.metadata.packageName);
 
 		if (isRightType && !isBlocked && isPathfinder) {
@@ -170,3 +170,4 @@ function onReady() {
 		}
 	}
 }
+
