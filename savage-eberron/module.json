@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.16",
+   "version": "0.0.17",
    "packs": [
      {
        "name": "savage-eberron-edges",
@@ -66,6 +66,15 @@
        "path": "packs/savage-eberron-abilities.db",
        "private": false,
        "type": "Item",
+       "system": "swade",
+       "flags": {}
+     },
+     {
+       "name": "savage-eberron-tables",
+       "label": "Savage Eberron Tables",
+       "path": "packs/savage-eberron-tables.db",
+       "private": false,
+       "type": "RollTable",
        "system": "swade",
        "flags": {}
      },
