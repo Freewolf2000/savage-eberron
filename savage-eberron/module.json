@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.17",
+   "version": "0.0.18",
    "packs": [
      {
        "name": "savage-eberron-edges",
@@ -27,7 +27,7 @@
      {
        "name": "savage-eberron-gear",
        "label": "Savage Eberron Gear",
-       "path": "packs/savage-eberron-equipment.db",
+       "path": "packs/savage-eberron-gear.db",
        "private": false,
        "type": "Item",
        "system": "swade",
