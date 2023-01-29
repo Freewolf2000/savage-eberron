@@ -51,7 +51,7 @@ Hooks.on("ready", async () => {
 
 Hooks.once("ready", onReady);
 function onReady() {
-	class SWPFJournalSheet extends JournalSheet {
+	class SWEBJournalSheet extends JournalSheet {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
 				classes: ["sheet", "journal-sheet", "journal-entry", "sweb-wrapper"]
@@ -95,10 +95,10 @@ function onReady() {
 		}
 	}
 
-	class SWPFJournalSheetPage extends JournalTextPageSheet {
+	class SWEBJournalSheetPage extends JournalTextPageSheet {
 		// static get defaultOptions() {
 		// 	return foundry.utils.mergeObject(super.defaultOptions, {
-		// 		classes: ["sheet", "journal-sheet", "journal-entry-page", "text", "swpf-journal-page", "swpf", "swpf-dialog"]
+		// 		classes: ["sheet", "journal-sheet", "journal-entry-page", "text", "sweb-journal-page", "swpf", "sweb-dialog"]
 		// 	});
 		// }
 
@@ -119,7 +119,7 @@ function onReady() {
 		}
 	}
 
-	class SWPFCompendiumTOC extends game.swade.apps.CompendiumTOC {
+	class SWEBCompendiumTOC extends game.swade.apps.CompendiumTOC {
 		static get defaultOptions() {
 			return foundry.utils.mergeObject(super.defaultOptions, {
 				classes: ['swade-app', 'compendium-toc', 'sweb-compendium'],
@@ -128,21 +128,21 @@ function onReady() {
 		}
 	}
 
-	class SWPFJournalSheetImagePage extends JournalImagePageSheet {}
+	class SWEBJournalSheetImagePage extends JournalImagePageSheet {}
 
-	Journal.registerSheet(ID, SWPFJournalSheet, {
+	Journal.registerSheet(ID, SWEBJournalSheet, {
 		type: "base",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
 	});
 
-	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWPFJournalSheetPage, {
+	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWEBJournalSheetPage, {
 		type: "text",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
 	});
 
-	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWPFJournalSheetImagePage, {
+	DocumentSheetConfig.registerSheet(JournalEntryPage, ID, SWEBJournalSheetImagePage, {
 		type: "image",
 		makeDefault: false,
 		label: `${SHEET_NAME}`,
@@ -166,7 +166,7 @@ function onReady() {
 		].includes(pack.metadata.packageName);
 
 		if (isRightType && !isBlocked && isPathfinder) {
-			pack.apps = [new SWPFCompendiumTOC(pack)];
+			pack.apps = [new SWEBCompendiumTOC(pack)];
 		}
 	}
 }

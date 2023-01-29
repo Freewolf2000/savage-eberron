@@ -8,16 +8,16 @@
 
 @import "trade-dress";
 @import "core";
+@import "custom";
 
-.swpf-sheet {
+.sweb-sheet {
 	@import "character-sheet";
 }
 
-.swpf-compendium {
-	
+.sweb-compendium {
+
     background-image: url(../assets/layout/sp-no-top-background.webp);
     background-size: 200% 100%;
-	
+
 	@import "compendium";
 }
-
