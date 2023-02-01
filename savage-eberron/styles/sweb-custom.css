@@ -1,0 +1,279 @@
+.sweb-wrapper, .sweb-core, .sweb-sheet, .sweb-compendium {
+  --red: #940609;
+  --tan: #ece5b2;
+  --table-color-a: #e1d9be;
+  --table-color-b: #f4f1e7;
+  --table-color-c: #e7b675;
+  --table-heading-color: #941a1c;
+  --table-subheading-color: black;
+  --heading-color-dark: var(--red);
+  --heading-color-light: #8e2d29;
+  --heading-color-cream: #e1d9bf;
+  --text-color-white: white;
+  --color-size-tiny: #e7c3b3;
+  --color-size-v-small: #d69c87;
+  --color-size-small: #c67b63;
+  --color-size-normal: #b65b44;
+  --color-size-large: #ad4731;
+  --color-size-huge: #a2311f;
+  --color-size-gargantuan: #940709;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-sidebar {
+  padding-left: 40px;
+  width: 400px;
+  color: var(--red);
+  font-family: "Treacherous Corners";
+  text-transform: uppercase;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-sidebar.collapsed {
+  padding-left: 0px;
+}
+
+.sheet.journal-entry.sweb-wrapper .pages-list .page-heading {
+  font-size: 1.5em;
+}
+
+.sheet.journal-entry.sweb-wrapper .pages-list .heading-link {
+  font-size: 1.3em;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-button.collapse-toggle {
+  background-color: var(--red);
+  z-index: 3;
+  height: 30px;
+  border-radius: 5px;
+  color: var(--heading-color-cream);
+  margin-right: 2px;
+}
+
+.sweb-wrapper .sweb-core .chapter-heading .chapter-number {
+  top: 2.4em;
+}
+
+.sheet.journal-entry.sweb-wrapper .sweb-core ul {
+  list-style-position: inside;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-sheet-container .journal-header {
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.sheet.journal-entry.sweb-wrapper {
+  background-image: url("../assets/layout/sp-no-top-background.webp");
+  background-size: 200% 100%;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-entry-content {
+  background: inherit;
+  border: none;
+  box-shadow: inset 10px 10px 5px -10px #000000ad;
+  border-top-left-radius: 2px;
+}
+
+.sheet.journal-entry.sweb-wrapper .window-resizable-handle {
+  z-index: 2;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-entry-content .journal-entry-pages .scrollable {
+  margin-bottom: 30px;
+  margin-right: 50px;
+  margin-top: 5px;
+}
+
+.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-buttons button.next,
+.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-buttons button.previous {
+  background-color: var(--red);
+  color: var(--heading-color-cream);
+}
+
+.sheet.journal-entry.sweb-wrapper:before,
+.sheet.journal-entry.sweb-wrapper:after {
+  content: " ";
+  width: 5em;
+  height: 102%;
+  position: absolute;
+  background-image: url("../assets/layout/sp-bar-background.webp");
+  background-size: auto 100%;
+  z-index: -1;
+  top: -5px;
+  z-index: 1;
+}
+
+.sheet.journal-entry.sweb-wrapper.minimized:before,
+.sheet.journal-entry.sweb-wrapper.minimized:after {
+  background: none;
+}
+
+.sheet.journal-entry.sweb-wrapper:before {
+  background-position: right;
+  left: -1.25em;
+}
+
+.sheet.journal-entry.sweb-wrapper:after {
+  background-position: left;
+  right: -1em;
+}
+
+.journal-sheet.sweb-wrapper .window-header,
+.sweb-sheet .window-header {
+  flex: 0 0 38px;
+  border: none;
+  color: var(--heading-color-cream);
+  text-shadow: 0 0 0.3em #000000;
+  background: linear-gradient(#00000099, transparent);
+  overflow: visible;
+  flex-wrap: nowrap;
+  height: 30px;
+}
+
+.sheet.journal-entry.sweb-wrapper .pages-list .page-heading .page-ownership {
+  color: var(--red);
+}
+
+.journal-sheet.sweb-wrapper .window-header {
+  height: fit-content;
+  padding-right: 50px;
+}
+
+.journal-sheet.sweb-wrapper .window-header .configure-sheet {
+  display: none;
+}
+
+.journal-sheet.sweb-wrapper .window-header .window-title {
+  font-family: "Treacherous Corners";
+  background-image: url("../assets/layout/red-narrow-banner.webp");
+  font-size: 2em;
+  flex-shrink: 1;
+  height: 2.5em;
+  max-width: 480px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  margin: 0 auto 0 -2ch;
+  padding: 0.7em 1ch 0 3ch;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 2;
+  left: -4px;
+}
+
+.journal-sheet.sweb-wrapper .window-header .window-title .document-id-link {
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+
+.journal-sheet.sweb-wrapper .window-header .window-title2:before {
+  content: " ";
+  position: absolute;
+  background-image: url("../assets/layout/shield-point-right.webp");
+  width: 5em;
+  height: 5em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  top: -46%;
+  left: -2.5em;
+  z-index: -1;
+}
+
+.journal-sheet.sweb-wrapper.minimized .window-header .window-title {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  background-image: none;
+  height: unset;
+  overflow: hidden;
+}
+
+.journal-sheet.sweb-wrapper .window-content {
+  background-image: none;
+  position: relative;
+}
+
+.journal-sheet.sweb-wrapper .editor-content {
+  margin: 0 4em;
+  --mask-image: linear-gradient(to bottom, transparent, black 2%, black 98%, transparent);
+  -webkit-mask-image: var(--mask-image);
+  mask-image: var(--mask-image);
+}
+
+.journal-sheet.sweb-wrapper form {
+  padding: 0.1em;
+  padding-top: 2em;
+}
+
+.journal-sheet.sweb-wrapper .window-content .editor {
+  height: 100%;
+  overflow: hidden;
+}
+
+.journal-sheet.sweb-wrapper .window-content .editor-edit {
+  background-color: var(--red);
+  color: var(--heading-color-cream);
+  /* visibility: hidden; */
+}
+
+.journal-sheet.sweb-wrapper.minimized .window-header {
+  padding-right: 0;
+}
+
+.journal-sheet.sweb-wrapper input,
+.journal-sheet.sweb-wrapper button[type=submit],
+.journal-sheet.sweb-wrapper select {
+  color: var(--heading-color-cream);
+  background-size: contain;
+  font-family: "Treacherous Corners";
+}
+
+.journal-sheet.sweb-wrapper input[name=name]:focus,
+.journal-sheet.sweb-wrapper select:focus {
+  box-shadow: none;
+}
+
+.journal-sheet.sweb-wrapper input[name=name] {
+  /*	background-image: url("../assets/layout/red-fabric.webp");
+  	left: 0px; */
+  display: none;
+}
+
+.journal-sheet.sweb-wrapper .chapter-label {
+  font-family: "Treacherous Corners";
+  color: var(--heading-color-cream);
+  background-color: transparent;
+  background-image: url("../assets/layout/chapter-name-banner-horiz.webp");
+  font-size: 2.5em;
+  background-repeat: no-repeat;
+  border: none;
+  position: absolute;
+  margin: 0;
+  right: -207px;
+  top: 201px;
+  background-size: auto 200%;
+  background-position: bottom;
+  text-align: center;
+  display: grid;
+  height: 57px;
+  width: 470px;
+  justify-content: center;
+  padding-top: 0.05em;
+  transform: rotate(90deg);
+}
+
+.journal-sheet.sweb-wrapper select option {
+  background-color: var(--red);
+}
+
+.journal-sheet.sweb-wrapper button[type=submit] {
+  display: none;
+}
+
+.journal-sheet.sweb-wrapper button[type=submit]:focus,
+.journal-sheet.sweb-wrapper button[type=submit]:hover {
+  box-shadow: 0 0 0.5em black inset;
+  cursor: pointer;
+}

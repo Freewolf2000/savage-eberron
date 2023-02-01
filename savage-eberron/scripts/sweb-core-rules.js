@@ -3,53 +3,40 @@ const SHEET_NAME = 'Savage Eberron Sheet';
 
 Hooks.on("init", () => {
 
-class SWEBSheet extends game.swade.sheets.CharacterSheet {
-  static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      classes: ['sweb-sheet', 'swade-official', 'sheet', 'actor'],
-      width: 705,
-      height: 800,
-      resizable: true,
-    });
+  class SWEBSheet extends game.swade.sheets.CharacterSheet {
+    static get defaultOptions() {
+      return mergeObject(super.defaultOptions, {
+        classes: ['sweb-sheet', 'swade-official', 'sheet', 'actor'],
+        width: 705,
+        height: 800,
+        resizable: true,
+      });
+    }
   }
-}
 
-Actors.registerSheet("sweb-core-rules", SWEBSheet, {
-  types: ["character"],
-  makeDefault: false,
-  label: SHEET_NAME
-});
+  Actors.registerSheet("sweb-core-rules", SWEBSheet, {
+    types: ["character"],
+    makeDefault: false,
+    label: SHEET_NAME
+  });
 
 });
 
 
 Hooks.on("ready", async () => {
-	//Force Building Pack Indexes so Entity Links don't break
-	for (let pack of game.packs.contents) {
-		if (pack.collection.includes(ID)) pack.getIndex();
-	}
+  //Force Building Pack Indexes so Entity Links don't break
+  for(let pack of game.packs.contents){
+    if(pack.collection.includes(ID))
+    pack.getIndex();
+  }
 
-	//Add sidebar clipping mask to page
-	$(document.body).append(await renderTemplate(`modules/${ID}/assets/layout/sidebar-mask.html`));
+  //Add sidebar clipping mask to page
+  $(document.body).append(await renderTemplate(`modules/${ID}/assets/layout/sidebar-mask.html`));
 
-  console.debug("SWEB Core | Initalizing....")
+  console.debug("Savage Eberron Core | Initalizing....")
+})
 
-  CONFIG.SWADE.measuredTemplatePresets.push({
-      data: { t: CONST.MEASURED_TEMPLATE_TYPES.RAY, distance: 12, width: 1 },
-      button: {
-        name: 'stream',
-        title: 'Stream', //Use localization Key
-        icon: 'fas fa-wave-square', //customize with either a FontAwesome Icon or some CSS class
-        visible: true,
-        button: true,
-        onClick: () => {
-          CONFIG.MeasuredTemplate.objectClass.fromPreset("stream");
-        },
-      },
-    })
-});
-
-Hooks.once("ready", onReady);
+Hooks.on("ready", onReady);
 function onReady() {
 	class SWEBJournalSheet extends JournalSheet {
 		static get defaultOptions() {
@@ -155,17 +142,11 @@ function onReady() {
 		const isBlocked = game.settings.get('swade', 'tocBlockList')[
 			pack.collection
 		];
-		const isPathfinder = [
-			"sweb-core-rules",
-			"sweb-rotrl1",
-			"sweb-rotrl2",
-			"sweb-rotrl3",
-			"sweb-rotrl4",
-			"sweb-rotrl5",
-			"sweb-rotrl6",
-		].includes(pack.metadata.packageName);
+		const isSWEB = [
+			  ID
+			].includes(pack.metadata.packageName);
 
-		if (isRightType && !isBlocked && isPathfinder) {
+		if (isRightType && !isBlocked && isSWEB) {
 			pack.apps = [new SWEBCompendiumTOC(pack)];
 		}
 	}
