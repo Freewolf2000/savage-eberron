@@ -1,93 +1,109 @@
 {
    "title": "Savage Eberron",
-   "description": "Ruleset for Savage Eberron rules. This includes content from SWADE, from the Fantasy Companion, from Savage Pathfinder, and homebrew content.",
+   "description": "Ruleset for Savage Eberron rules. This includes content from SWADE, from the Fantasy Companion, from Savage Pathfinder, and homebrew content. This is for my own personal use in my campaigns and is not available for resale or anything.",
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.20",
+   "version": "0.0.21",
    "packs": [
+     {
+       "name": "savage-eberron-bestiary",
+       "label": "Savage Eberron Bestiary",
+       "path": "packs/savage-bestiary.db",
+       "type": "Actor",
+       "system": "swade",
+       "package": "sweb-core-rules"
+     },
+     {
+       "name": "savage-eberron-bestiary-abilities",
+       "label": "Savage Eberron Bestiary Abilities",
+       "path": "packs/savage-bestiary-abilities.db",
+       "type": "Item",
+       "system": "swade",
+       "package": "sweb-core-rules"
+     },
      {
        "name": "savage-eberron-edges",
        "label": "Savage Eberron Edges",
        "path": "packs/savage-eberron-edges.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-hindrances",
        "label": "Savage Eberron Hindrances",
        "path": "packs/savage-eberron-hindrances.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-gear",
        "label": "Savage Eberron Gear",
        "path": "packs/savage-eberron-gear.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-powers",
        "label": "Savage Eberron Powers",
        "path": "packs/savage-eberron-powers.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-rules",
        "label": "Savage Eberron Rules",
        "path": "packs/savage-eberron-rules.db",
-       "private": false,
        "type": "JournalEntry",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-skills",
        "label": "Savage Eberron Skills",
        "path": "packs/savage-eberron-skills.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-special-abilities",
        "label": "Savage Eberron Special Abilities",
        "path": "packs/savage-eberron-abilities.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
+     },
+     {
+       "name": "savage-eberron-species",
+       "label": "Savage Eberron Species",
+       "path": "packs/savage-eberron-species.db",
+       "type": "Item",
+       "system": "swade",
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-tables",
        "label": "Savage Eberron Tables",
        "path": "packs/savage-eberron-tables.db",
-       "private": false,
        "type": "RollTable",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      },
      {
        "name": "savage-eberron-treasure",
        "label": "Savage Eberron Treasure",
        "path": "packs/savage-eberron-treasure.db",
-       "private": false,
        "type": "Item",
        "system": "swade",
-       "flags": {}
+       "package": "sweb-core-rules"
      }
    ],
+   "scripts": [],
    "esmodules": [
      "scripts/sweb-core-rules.js"
    ],
@@ -96,16 +112,6 @@
      "styles/sweb-custom.css"
    ],
    "id": "sweb-core-rules",
-   "authors": [
-     {
-       "name": "Freewolf2000",
-       "url": "https://www.savagetalesofeberron.com/",
-       "podcast": "https://savagetalesofeberron.podbean.com/",
-       "discord": "Freewolf#7951",
-       "twitter": "@SavageEberron",
-       "reddit": "u/Freewolf"
-     }
-   ],
    "relationships": {
      "systems": [
        {
@@ -119,6 +125,16 @@
        }
      ]
    },
+   "authors": [
+     {
+       "name": "Freewolf2000",
+       "url": "https://www.savagetalesofeberron.com/",
+       "podcast": "https://savagetalesofeberron.podbean.com/",
+       "discord": "Freewolf#7951",
+       "twitter": "@SavageEberron",
+       "reddit": "u/Freewolf"
+     }
+   ],
    "compatibility": {
      "minimum": "10",
      "verified": "10"
