@@ -4,12 +4,12 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.21",
+   "version": "0.0.22",
    "packs": [
      {
        "name": "savage-eberron-bestiary",
        "label": "Savage Eberron Bestiary",
-       "path": "packs/savage-bestiary.db",
+       "path": "packs/savage-eberron-bestiary.db",
        "type": "Actor",
        "system": "swade",
        "package": "sweb-core-rules"
@@ -17,7 +17,7 @@
      {
        "name": "savage-eberron-bestiary-abilities",
        "label": "Savage Eberron Bestiary Abilities",
-       "path": "packs/savage-bestiary-abilities.db",
+       "path": "packs/savage-eberron-bestiary-abilities.db",
        "type": "Item",
        "system": "swade",
        "package": "sweb-core-rules"
@@ -73,7 +73,7 @@
      {
        "name": "savage-eberron-special-abilities",
        "label": "Savage Eberron Special Abilities",
-       "path": "packs/savage-eberron-abilities.db",
+       "path": "packs/savage-eberron-special-abilities.db",
        "type": "Item",
        "system": "swade",
        "package": "sweb-core-rules"
