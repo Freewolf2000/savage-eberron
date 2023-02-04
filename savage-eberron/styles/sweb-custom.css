@@ -19,7 +19,7 @@
   --color-size-gargantuan: #940709;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-sidebar {
+.sheet.journal-entry.journal-sheet .journal-sidebar {
   padding-left: 40px;
   width: 400px;
   color: var(--red);
@@ -27,19 +27,19 @@
   text-transform: uppercase;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-sidebar.collapsed {
+.sheet.journal-entry.journal-sheet .journal-sidebar.collapsed {
   padding-left: 0px;
 }
 
-.sheet.journal-entry.sweb-wrapper .pages-list .page-heading {
+.sheet.journal-entry.journal-sheet .pages-list .page-heading {
   font-size: 1.5em;
 }
 
-.sheet.journal-entry.sweb-wrapper .pages-list .heading-link {
+.sheet.journal-entry.journal-sheet .pages-list .heading-link {
   font-size: 1.3em;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-button.collapse-toggle {
+.sheet.journal-entry.journal-sheet .journal-sidebar .action-button.collapse-toggle {
   background-color: var(--red);
   z-index: 3;
   height: 30px;
@@ -48,50 +48,50 @@
   margin-right: 2px;
 }
 
-.sweb-wrapper .sweb-core .chapter-heading .chapter-number {
+.sheet.journal-entry.journal-sheet .sweb-core .chapter-heading .chapter-number {
   top: 2.4em;
 }
 
-.sheet.journal-entry.sweb-wrapper .sweb-core ul {
+.sheet.journal-entry.journal-sheet .sweb-core ul {
   list-style-position: inside;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-sheet-container .journal-header {
+.sheet.journal-entry.journal-sheet .journal-sheet-container .journal-header {
   height: 0px;
   margin: 0px;
   padding: 0px;
 }
 
-.sheet.journal-entry.sweb-wrapper {
+.sheet.journal-entry.journal-sheet {
   background-image: url("../assets/layout/sp-no-top-background.webp");
   background-size: 200% 100%;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-entry-content {
+.sheet.journal-entry.journal-sheet .journal-entry-content {
   background: inherit;
   border: none;
   box-shadow: inset 10px 10px 5px -10px #000000ad;
   border-top-left-radius: 2px;
 }
 
-.sheet.journal-entry.sweb-wrapper .window-resizable-handle {
+.sheet.journal-entry.journal-sheet .window-resizable-handle {
   z-index: 2;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-entry-content .journal-entry-pages .scrollable {
+.sheet.journal-entry.journal-sheet .journal-entry-content .journal-entry-pages .scrollable {
   margin-bottom: 30px;
   margin-right: 50px;
   margin-top: 5px;
 }
 
-.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-buttons button.next,
-.sheet.journal-entry.sweb-wrapper .journal-sidebar .action-buttons button.previous {
+.sheet.journal-entry.journal-sheet .journal-sidebar .action-buttons button.next,
+.sheet.journal-entry.journal-sheet .journal-sidebar .action-buttons button.previous {
   background-color: var(--red);
   color: var(--heading-color-cream);
 }
 
-.sheet.journal-entry.sweb-wrapper:before,
-.sheet.journal-entry.sweb-wrapper:after {
+.sheet.journal-entry.journal-sheet:before,
+.sheet.journal-entry.journal-sheet:after {
   content: " ";
   width: 5em;
   height: 102%;
@@ -103,22 +103,22 @@
   z-index: 1;
 }
 
-.sheet.journal-entry.sweb-wrapper.minimized:before,
-.sheet.journal-entry.sweb-wrapper.minimized:after {
+.sheet.journal-entry.journal-sheet.minimized:before,
+.sheet.journal-entry.journal-sheet.minimized:after {
   background: none;
 }
 
-.sheet.journal-entry.sweb-wrapper:before {
+.sheet.journal-entry.journal-sheet:before {
   background-position: right;
   left: -1.25em;
 }
 
-.sheet.journal-entry.sweb-wrapper:after {
+.sheet.journal-entry.journal-sheet:after {
   background-position: left;
   right: -1em;
 }
 
-.journal-sheet.sweb-wrapper .window-header,
+.sheet.journal-entry.journal-sheet .window-header,
 .sweb-sheet .window-header {
   flex: 0 0 38px;
   border: none;
@@ -130,20 +130,20 @@
   height: 30px;
 }
 
-.sheet.journal-entry.sweb-wrapper .pages-list .page-heading .page-ownership {
+.sheet.journal-entry.journal-sheet .pages-list .page-heading .page-ownership {
   color: var(--red);
 }
 
-.journal-sheet.sweb-wrapper .window-header {
+.sheet.journal-entry.journal-sheet .window-header {
   height: fit-content;
   padding-right: 50px;
 }
 
-.journal-sheet.sweb-wrapper .window-header .configure-sheet {
+.sheet.journal-entry.journal-sheet .window-header .configure-sheet {
   display: none;
 }
 
-.journal-sheet.sweb-wrapper .window-header .window-title {
+.sheet.journal-entry.journal-sheet .window-header .window-title {
   font-family: "Treacherous Corners";
   background-image: url("../assets/layout/red-narrow-banner.webp");
   font-size: 2em;
@@ -162,12 +162,12 @@
   left: -4px;
 }
 
-.journal-sheet.sweb-wrapper .window-header .window-title .document-id-link {
+.sheet.journal-entry.journal-sheet .window-header .window-title .document-id-link {
   font-size: 0.7em;
   vertical-align: middle;
 }
 
-.journal-sheet.sweb-wrapper .window-header .window-title2:before {
+.sheet.journal-entry.journal-sheet .window-header .window-title2:before {
   content: " ";
   position: absolute;
   background-image: url("../assets/layout/shield-point-right.webp");
@@ -181,7 +181,7 @@
   z-index: -1;
 }
 
-.journal-sheet.sweb-wrapper.minimized .window-header .window-title {
+.sheet.journal-entry.journal-sheet.minimized .window-header .window-title {
   font-size: 1em;
   margin: 0;
   padding: 0;
@@ -190,58 +190,58 @@
   overflow: hidden;
 }
 
-.journal-sheet.sweb-wrapper .window-content {
+.sheet.journal-entry.journal-sheet .window-content {
   background-image: none;
   position: relative;
 }
 
-.journal-sheet.sweb-wrapper .editor-content {
+.sheet.journal-entry.journal-sheet .editor-content {
   margin: 0 4em;
   --mask-image: linear-gradient(to bottom, transparent, black 2%, black 98%, transparent);
   -webkit-mask-image: var(--mask-image);
   mask-image: var(--mask-image);
 }
 
-.journal-sheet.sweb-wrapper form {
+.sheet.journal-entry.journal-sheet form {
   padding: 0.1em;
   padding-top: 2em;
 }
 
-.journal-sheet.sweb-wrapper .window-content .editor {
+.sheet.journal-entry.journal-sheet .window-content .editor {
   height: 100%;
   overflow: hidden;
 }
 
-.journal-sheet.sweb-wrapper .window-content .editor-edit {
+.sheet.journal-entry.journal-sheet .window-content .editor-edit {
   background-color: var(--red);
   color: var(--heading-color-cream);
   /* visibility: hidden; */
 }
 
-.journal-sheet.sweb-wrapper.minimized .window-header {
+.sheet.journal-entry.journal-sheet.minimized .window-header {
   padding-right: 0;
 }
 
-.journal-sheet.sweb-wrapper input,
-.journal-sheet.sweb-wrapper button[type=submit],
-.journal-sheet.sweb-wrapper select {
+.sheet.journal-entry.journal-sheet input,
+.sheet.journal-entry.journal-sheet button[type=submit],
+.sheet.journal-entry.journal-sheet select {
   color: var(--heading-color-cream);
   background-size: contain;
   font-family: "Treacherous Corners";
 }
 
-.journal-sheet.sweb-wrapper input[name=name]:focus,
-.journal-sheet.sweb-wrapper select:focus {
+.sheet.journal-entry.journal-sheet input[name=name]:focus,
+.sheet.journal-entry.journal-sheet select:focus {
   box-shadow: none;
 }
 
-.journal-sheet.sweb-wrapper input[name=name] {
+.sheet.journal-entry.journal-sheet input[name=name] {
   /*	background-image: url("../assets/layout/red-fabric.webp");
   	left: 0px; */
   display: none;
 }
 
-.journal-sheet.sweb-wrapper .chapter-label {
+.sheet.journal-entry.journal-sheet .chapter-label {
   font-family: "Treacherous Corners";
   color: var(--heading-color-cream);
   background-color: transparent;
@@ -264,16 +264,16 @@
   transform: rotate(90deg);
 }
 
-.journal-sheet.sweb-wrapper select option {
+.sheet.journal-entry.journal-sheet select option {
   background-color: var(--red);
 }
 
-.journal-sheet.sweb-wrapper button[type=submit] {
+.sheet.journal-entry.journal-sheet button[type=submit] {
   display: none;
 }
 
-.journal-sheet.sweb-wrapper button[type=submit]:focus,
-.journal-sheet.sweb-wrapper button[type=submit]:hover {
+.sheet.journal-entry.journal-sheet button[type=submit]:focus,
+.sheet.journal-entry.journal-sheet button[type=submit]:hover {
   box-shadow: 0 0 0.5em black inset;
   cursor: pointer;
 }
