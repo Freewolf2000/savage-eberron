@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.24",
+   "version": "0.0.26",
    "packs": [
      {
        "name": "savage-eberron-bestiary",
@@ -101,15 +101,24 @@
        "type": "Item",
        "system": "swade",
        "package": "sweb-core-rules"
+     },
+     {
+       "label": "Savage Eberron Action Deck",
+       "name": "savage-eberron-decks",
+       "type": "Cards",
+       "path": "packs/savage-eberron-decks.db",
+       "system": "swade",
+       "package": "sweb-core-rules"
      }
-   ],
+],
    "scripts": [],
    "esmodules": [
      "scripts/sweb-core-rules.js"
    ],
    "styles": [
      "styles/sweb-core.css",
-     "styles/sweb-custom.css"
+     "styles/sweb-custom.css",
+     "styles/sweb-periodicals.css"
    ],
    "id": "sweb-core-rules",
    "relationships": {
