@@ -1,3 +1,23 @@
+.sweb-wrapper, .sweb-core, .sweb-sheet, .sweb-compendium {
+  --red: #940609;
+  --tan: #ece5b2;
+  --table-color-a: #e1d9be;
+  --table-color-b: #f4f1e7;
+  --table-color-c: #e7b675;
+  --table-heading-color: #941a1c;
+  --table-subheading-color: black;
+  --heading-color-dark: var(--red);
+  --heading-color-light: #8e2d29;
+  --heading-color-cream: #e1d9bf;
+  --text-color-white: white;
+  --color-size-tiny: #e7c3b3;
+  --color-size-v-small: #d69c87;
+  --color-size-small: #c67b63;
+  --color-size-normal: #b65b44;
+  --color-size-large: #ad4731;
+  --color-size-huge: #a2311f;
+  --color-size-gargantuan: #940709;
+}
 /* JOURNAL WRAPPER */
 .journal-sheet.sweb-periodicals-wrapper, .sweb-sheet {
     background-image: url("../assets/layout/table-parchment.webp");
@@ -12,11 +32,11 @@
   display: none;
 }
 .journal-sheet.sweb-periodicals-wrapper .chapter-label {
-  font-family: "Olde English";
+  font-family: "IM Fell English SC";
 }
 /* TABLES */
 .sweb-periodicals table {
-  font-family: "Olivetti";
+  font-family: "Cinzel";
   font-size: 1em;
 	background: none;
 	border: none;
@@ -41,8 +61,8 @@
 }
 
 /* HEADINGS */
-.sweb-periodicals table h1 {
-  font-family: "Excluded";
+.sweb-periodicals table .issue-title {
+  font-family: "IM Fell English SC";
   font-size: 2em;
   font-weight: bold;
   color: var(--red);
@@ -50,8 +70,8 @@
   margin-bottom: .2em;
   border: none;
 }
-.sweb-periodicals table h1.sharn-inquisitive-title {
-  font-family: "Olde English";
+.sweb-periodicals table .sharn-inquisitive-title {
+  font-family: "Aguafina Script";
   color: var(--black);
   text-align: center;
   text-transform: capitalize;
@@ -62,7 +82,7 @@
 .sweb-periodicals table h2,
 .sweb-periodicals table h3,
 .sweb-periodicals table h4 {
-  font-family: "Crossroads";
+  font-family: "IM Fell English SC";
 }
 .sweb-periodicals table h2 {
   font-size: 1.6em;
@@ -77,6 +97,11 @@
 .sweb-periodicals table h4 {
   margin: 0;
   color: var(--red);
+}
+.sweb-periodicals table .advert h2 {
+  font-size: 1.3em;
+  color: var(--red);
+  text-align: center;
 }
 
 /* ALIGNMENT */
@@ -153,7 +178,12 @@
   border: 2px solid  var(--red);
   padding: .3em;
   background-color: white;
-  font-family: "Contender";
+  font-family: "Cinzel";
+}
+
+/* Increase the font size of the story paragraph */
+.sweb-periodicals table .main-article p {
+  font-size: 1.2em;
 }
 
 /* CAPITALIZE FIRST LETTER OF STORY */

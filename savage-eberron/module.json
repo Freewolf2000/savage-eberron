@@ -4,7 +4,7 @@
    "manifest": "https://raw.githubusercontent.com/Freewolf2000/savage-eberron/main/savage-eberron/module.json",
    "download": "https://github.com/Freewolf2000/savage-eberron/raw/main/savage-eberron.zip?raw=true",
    "url": "https://github.com/Freewolf2000/savage-eberron",
-   "version": "0.0.30",
+   "version": "0.0.31",
    "packs": [
      {
        "name": "savage-eberron-bestiary",
@@ -19,6 +19,14 @@
        "label": "Savage Eberron Bestiary Abilities",
        "path": "packs/savage-eberron-bestiary-abilities.db",
        "type": "Item",
+       "system": "swade",
+       "package": "sweb-core-rules"
+     },
+     {
+       "name": "savage-eberron-decks",
+       "label": "Savage Eberron Decks",
+       "path": "packs/savage-eberron-decks.db",
+       "type": "Cards",
        "system": "swade",
        "package": "sweb-core-rules"
      },
@@ -99,14 +107,6 @@
        "label": "Savage Eberron Treasure",
        "path": "packs/savage-eberron-treasure.db",
        "type": "Item",
-       "system": "swade",
-       "package": "sweb-core-rules"
-     },
-     {
-       "label": "Savage Eberron Decks",
-       "name": "savage-eberron-decks",
-       "type": "Cards",
-       "path": "packs/savage-eberron-decks.db",
        "system": "swade",
        "package": "sweb-core-rules"
      }
