@@ -1,23 +1,3 @@
-.sweb-wrapper, .sweb-core, .sweb-sheet, .sweb-compendium {
-  --red: #940609;
-  --tan: #ece5b2;
-  --table-color-a: #e1d9be;
-  --table-color-b: #f4f1e7;
-  --table-color-c: #e7b675;
-  --table-heading-color: #941a1c;
-  --table-subheading-color: black;
-  --heading-color-dark: var(--red);
-  --heading-color-light: #8e2d29;
-  --heading-color-cream: #e1d9bf;
-  --text-color-white: white;
-  --color-size-tiny: #e7c3b3;
-  --color-size-v-small: #d69c87;
-  --color-size-small: #c67b63;
-  --color-size-normal: #b65b44;
-  --color-size-large: #ad4731;
-  --color-size-huge: #a2311f;
-  --color-size-gargantuan: #940709;
-}
 /* JOURNAL WRAPPER */
 .journal-sheet.sweb-periodicals-wrapper, .sweb-sheet {
     background-image: url("../assets/layout/table-parchment.webp");
@@ -36,7 +16,7 @@
 }
 /* TABLES */
 .sweb-periodicals table {
-  font-family: "Cinzel";
+  font-family: "IM Fell English";
   font-size: 1em;
 	background: none;
 	border: none;
@@ -65,14 +45,13 @@
   font-family: "IM Fell English SC";
   font-size: 2em;
   font-weight: bold;
-  color: var(--red);
-  padding-bottom: .1em;
-  margin-bottom: .2em;
+  color: #941a1c;
+  padding: .2em 0;
   border: none;
 }
 .sweb-periodicals table .sharn-inquisitive-title {
   font-family: "Aguafina Script";
-  color: var(--black);
+  color: #941a1c;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: .2ch;
@@ -82,6 +61,7 @@
 .sweb-periodicals table h2,
 .sweb-periodicals table h3,
 .sweb-periodicals table h4 {
+  color: #941a1c;
   font-family: "IM Fell English SC";
 }
 .sweb-periodicals table h2 {
@@ -178,12 +158,12 @@
   border: 2px solid  var(--red);
   padding: .3em;
   background-color: white;
-  font-family: "Cinzel";
+/*  font-family: "Cinzel"; */
 }
 
 /* Increase the font size of the story paragraph */
 .sweb-periodicals table .main-article p {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 /* CAPITALIZE FIRST LETTER OF STORY */
